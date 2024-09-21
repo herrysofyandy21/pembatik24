@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jurnal Umum</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Gaya untuk memastikan layout */
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header tetap di atas */
+        header {
+            background: linear-gradient(45deg, #004080, #0066cc);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 18px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1400;
+            color: white;
+            text-align: center;
+        }
+
+        /* Memperindah header dengan background gradient dan shadow */
+        header h1 {
+            margin: 10px 0;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        header h1:first-child {
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 1.2px;
+        }
+
+        header h1:nth-child(2) {
+            font-size: 20px;
+            font-weight: normal;
+            color: #ffdd57;
+            margin-top: 5px;
+            letter-spacing: 0.8px;
+        }
+
+        /* Gaya tombol */
+        header ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 15px 0 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        header button {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+        }
+
+        header button:nth-child(1):hover {
+            background-color: #218838;
+            color: #fff;
+        }
+
+        /* Tombol berwarna */
+        header button:nth-child(1) {
+            background-color: #007bff;
+            color: white;
+        }
+
+        header button:nth-child(1):hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        header button:nth-child(4) {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        header button:nth-child(4):hover {
+            background-color: #e0a800;
+            transform: scale(1.05);
+        }
+
+        header button:nth-child(3),
+        header button:nth-child(2) {
+            background-color: #007bff;
+            color: white;
+        }
+
+        header button:nth-child(3):hover,
+        header button:nth-child(2):hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        /* Tambahkan jarak dari header agar iframe tidak tertutup */
+        .iframe-container {
+            position: relative;
+            width: 100%;
+            height: 365px;
+            margin: 160px auto 0; /* Menambahkan margin-top untuk memberi jarak dari header */
+            overflow: hidden;
+        }
+
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Footer style */
+        footer { 
+            background-color: #004080;
+            color: #fff;
+            padding: 9px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Belajar Jurnal Umum</h1>
+        <h1>By. Herry Sofyandy P., M.Pd., Gr</h1>
+        <ul>
+              <button type="button" onclick="window.location.href='https://file:///C:/Users/Heri/Documents/pembatik/home/home.html';">HOME</button>
+            <button type="button" onclick="window.location.href='file:///C:/Users/Heri/Documents/pembatik/materi/materi.html';">MATERI</button>
+            <button type="button" onclick="window.location.href='file:///C:/Users/Heri/Documents/pembatik/simualsi/simulasi.html';">SIMULASI</button>
+            <button type="button" onclick="window.location.href='file:///C:/Users/Heri/Documents/pembatik/kuis/kuis.html';">KUIS</button>
+        </ul>
+    </header>
+
+    <!-- Menambahkan kode embed Wordwall di Tengah Halaman -->
+    <div class="iframe-container">
+       <iframe src="https://wordwall.net/embed/4cb8d01d32dd40deb3434413637a9e53?themeId=1&templateId=36&fontStackId=0" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024. Herry Sofyandy Pranata. Hak ini dilindungi.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

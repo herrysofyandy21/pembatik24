@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jurnal Umum</title>
+    <style>
+        /* Gaya untuk memastikan layout */
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            padding-top: 150px; /* Ruang untuk header tetap */
+        }
+
+        /* Header tetap di atas */
+        header {
+            background: linear-gradient(45deg, #004080, #0066cc);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 10px;
+            position: fixed; /* Tetap di bagian atas */
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000; /* Di atas konten */
+            color: white;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 10px 0;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        header h1:first-child {
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 1.2px;
+        }
+
+        header h1:nth-child(2) {
+            font-size: 20px;
+            font-weight: normal;
+            color: #ffdd57;
+            margin-top: 5px;
+            letter-spacing: 0.8px;
+        }
+
+        /* Gaya tombol */
+        header ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 15px 0 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        header button {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+        }
+
+        header button:nth-child(3) {
+            background-color: #dc3545; /* Warna merah */
+            color: white;
+        }
+
+        header button:nth-child(3):hover {
+            background-color: #e0a800;
+            transform: scale(1.05)
+        }
+
+        header button:nth-child(2),
+        header button:nth-child(1),
+        header button:nth-child(4) {
+            background-color: #007bff; /* Warna biru */
+            color: white;
+        }
+
+        header button:nth-child(2):hover,
+        header button:nth-child(3):hover,
+        header button:nth-child(4):hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        .content {
+            padding: 10px;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding-bottom: 100px; /* Memberi ruang agar konten tidak tertutupi footer */
+        }
+
+        h2 {
+            color: #004080;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin: 5px 0 5px;
+        }
+
+        input[type="text"], input[type="number"], input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button[type="submit"] {
+            background-color: #28a745;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #218838;
+        }
+
+        /* Mengecilkan tampilan tabel */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            font-size: 12px; /* Mengecilkan font tabel */
+        }
+
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+
+        th, td {
+            padding: 1px; /* Mengurangi padding sel */
+            text-align: left;
+        }
+
+        th {
+            background-color: #004080;
+            color: white;
+        }
+
+        /* Membatasi lebar kolom untuk efisiensi */
+        th:nth-child(1), td:nth-child(1) {
+            width: 10%; /* Kolom Tanggal */
+        }
+
+        th:nth-child(2), td:nth-child(2) {
+            width: 30%; /* Kolom Deskripsi */
+        }
+
+        th:nth-child(3), td:nth-child(3),
+        th:nth-child(5), td:nth-child(5) {
+            width: 20%; /* Kolom Akun */
+        }
+
+        th:nth-child(4), td:nth-child(4),
+        th:nth-child(6), td:nth-child(6) {
+            width: 15%; /* Kolom Debit & Kredit */
+        }
+
+        footer {
+            background-color: #004080;
+            color: #fff;
+            text-align: center;
+            padding: 3px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Belajar Jurnal Umum</h1>
+        <h1>By. Herry Sofyandy P., M.Pd., Gr</h1>
+        <ul>
+            <button type="button" onclick="window.location.href='https://file:///C:/Users/Heri/Documents/pembatik/home/home.html';">HOME</button>
+            <button type="button" onclick="window.location.href='file:///C:/Users/Heri/Documents/pembatik/materi/materi.html';">MATERI</button>
+            <button type="button" onclick="window.location.href='file:///C:/Users/Heri/Documents/pembatik/simualsi/simulasi.html';">SIMULASI</button>
+            <button type="button" onclick="window.location.href='file:///C:/Users/Heri/Documents/pembatik/kuis/kuis.html';">KUIS</button>
+        </ul>
+    </header>
+
+    <!-- Konten Simulasi Jurnal -->
+    <div class="content">
+        <section id="simulasi" class="section">
+            <h2>Simulasi Pencatatan Jurnal Umum Otomatis</h2>
+            <p>Tuliskan deskripsi transaksi, dan sistem akan otomatis mencatat transaksi ke dalam jurnal umum.</p>
+            <form id="journal-form">
+                <label for="date">Tanggal Transaksi:</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="description">Deskripsi Transaksi:</label>
+                <input type="text" id="description" name="description" placeholder="Contoh: Penjualan barang, Pembayaran hutang" required>
+
+                <label for="amount">Jumlah Transaksi (Rp):</label>
+                <input type="number" id="amount" name="amount" required>
+
+                <button type="submit">Catat Transaksi</button>
+            </form>
+            
+            <div id="journal">
+                <h3>Jurnal Umum</h3>
+                <table id="journal-table">
+                    <thead>
+                        <tr>
+                            <th>Tanggal</th>
+                            <th>Deskripsi</th>
+                            <th>Akun Debit</th>
+                            <th>Debit (Rp)</th>
+                            <th>Akun Kredit</th>
+                            <th>Kredit (Rp)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Transaksi akan ditampilkan di sini -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024. Herry Sofyandy Pranata. Hak ini dilindungi.</p>
+    </footer>
+
+    <!-- JavaScript untuk Simulasi -->
+    <script>
+        const journalForm = document.getElementById('journal-form');
+        const journalTable = document.getElementById('journal-table').getElementsByTagName('tbody')[0];
+
+        journalForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const date = document.getElementById('date').value;
+            const description = document.getElementById('description').value;
+            const amount = document.getElementById('amount').value;
+
+            const debitAccount = "Kas";
+            const creditAccount = "Penjualan";
+
+            // Create a new row
+            const newRow = journalTable.insertRow();
+
+            // Insert cells and data
+            const cell1 = newRow.insertCell(0);
+            const cell2 = newRow.insertCell(1);
+            const cell3 = newRow.insertCell(2);
+            const cell4 = newRow.insertCell(3);
+            const cell5 = newRow.insertCell(4);
+            const cell6 = newRow.insertCell(5);
+
+            cell1.textContent = date;
+            cell2.textContent = description;
+            cell3.textContent = debitAccount;
+            cell4.textContent = parseFloat(amount).toLocaleString('id-ID');
+            cell5.textContent = creditAccount;
+            cell6.textContent = parseFloat(amount).toLocaleString('id-ID');
+
+            // Clear form after submission
+            journalForm.reset();
+        });
+    </script>
+
+</body>
+</html>
